@@ -1,10 +1,15 @@
 <script>
+import ProductCard from './ProductCard.vue'
     export default{
-        name:'CharactersList'
+        name:'CharactersList',
+        components:{
+            ProductCard
+        }
     }
 </script>
 
 <template>
+    <ProductCard/>
     
 </template>
 
