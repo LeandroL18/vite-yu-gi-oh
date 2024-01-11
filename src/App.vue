@@ -11,21 +11,27 @@ export default{
   },
   data(){
     return{
-      store,
+      store
     }
   },
   methods:{
+    // metodo di chiamata
     getCharacters(){
       axios.get(store.apiURL)
+
       .then((res => {
         console.log(res.data.data);
+        // salvo l'array in charactersList
+        store.charactersList = res.data.data;
       }))
+
       .catch((err)=>{
         console.log("Errori = ",err);
       })
     }
   },
   created(){
+    // chiamata all'apertura dell'app
     this.getCharacters();
   }
 }
