@@ -8,6 +8,7 @@
 </script>
 
 <template>
+    <!-- card -->
     <div>
         <img :src="info.card_images[0].image_url" alt="img">
         <h3>{{ info.name }}</h3>
@@ -20,10 +21,10 @@
     @use '../styles/partials/mixins' as *;
 
     div{
-        width: 200px;
+        width: 162.1px;
         background-color: rgb(203, 132, 45);
         text-align: center;
-        height: 400px;
+        height: 380px;
     }
 
     img{

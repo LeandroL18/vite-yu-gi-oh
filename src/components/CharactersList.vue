@@ -5,7 +5,7 @@ import ProductCard from './ProductCard.vue'
 export default{
     name:'CharactersList',
     components:{
-        ProductCard
+        ProductCard,
     },
     data(){
         return{
@@ -16,37 +16,21 @@ export default{
 </script>
 
 <template>
-    <div id="container_generale">
-        <select name="" id="">
-            <option value="">Alien</option>
-        </select>
         <div id="bg_white">
-            <div id="bg_black">Found 20 cards</div>
+            <div id="bg_black">Found cards</div>
             <div id="container_cards">
+                <!-- visualizzazione cards -->
                 <div v-for="(character,i) in store.charactersList" :key="i">
                     <ProductCard :info="character"/>
                 </div>
             </div>
-        </div>
-    </div>
-    
+        </div>    
 </template>
 
 <style lang="scss" scoped>
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
 
-    #container_generale{
-        width: 100%;
-        background-color: rgb(203, 132, 45);
-        padding-bottom: 50px;
-    }
-
-    select{
-        padding: 5px;
-        border-radius: 5px;
-        margin: 20px 0 20px 100px;
-    }
 
     #bg_white{
         background-color: white;
@@ -62,6 +46,7 @@ export default{
     }
 
     #container_cards{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 9.1px;
